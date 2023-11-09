@@ -27,6 +27,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="날씨 불러오기">
                                     <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loadWeatherBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJX-gR-fyZ"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="rbB-IP-v3j">
                                 <rect key="frame" x="24" y="231.33333333333337" width="345" height="174"/>
@@ -92,6 +95,14 @@
                             <constraint firstItem="rbB-IP-v3j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="tS0-5o-ZVq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="IKn-IB-xgV" id="d0i-dO-j42"/>
+                        <outlet property="cityTextField" destination="UtQ-cM-L1Q" id="oaV-v9-tGJ"/>
+                        <outlet property="maxLabel" destination="v4h-pA-OsZ" id="hG6-E5-bOq"/>
+                        <outlet property="minLabel" destination="BEZ-AT-rNV" id="9KJ-lV-dNP"/>
+                        <outlet property="temLabel" destination="26z-ZV-2rU" id="3uK-Ze-P4m"/>
+                        <outlet property="weatherLabel" destination="5KT-xP-wOa" id="rEq-7K-fAa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

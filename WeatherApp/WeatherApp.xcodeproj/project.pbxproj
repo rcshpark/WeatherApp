@@ -13,6 +13,7 @@
 		7E62B2122AFCA75100339B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E62B2102AFCA75100339B9B /* Main.storyboard */; };
 		7E62B2142AFCA75200339B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E62B2132AFCA75200339B9B /* Assets.xcassets */; };
 		7E62B2172AFCA75200339B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E62B2152AFCA75200339B9B /* LaunchScreen.storyboard */; };
+		7E62B21F2AFCD3DA00339B9B /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62B21E2AFCD3DA00339B9B /* WeatherInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7E62B2132AFCA75200339B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E62B2162AFCA75200339B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E62B2182AFCA75200339B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E62B21E2AFCD3DA00339B9B /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				7E62B20A2AFCA75100339B9B /* AppDelegate.swift */,
 				7E62B20C2AFCA75100339B9B /* SceneDelegate.swift */,
 				7E62B20E2AFCA75100339B9B /* ViewController.swift */,
+				7E62B21E2AFCD3DA00339B9B /* WeatherInformation.swift */,
 				7E62B2102AFCA75100339B9B /* Main.storyboard */,
 				7E62B2132AFCA75200339B9B /* Assets.xcassets */,
 				7E62B2152AFCA75200339B9B /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E62B20F2AFCA75100339B9B /* ViewController.swift in Sources */,
+				7E62B21F2AFCD3DA00339B9B /* WeatherInformation.swift in Sources */,
 				7E62B20B2AFCA75100339B9B /* AppDelegate.swift in Sources */,
 				7E62B20D2AFCA75100339B9B /* SceneDelegate.swift in Sources */,
 			);
