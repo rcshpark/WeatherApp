@@ -100,6 +100,7 @@
                         <outlet property="cityTextField" destination="UtQ-cM-L1Q" id="oaV-v9-tGJ"/>
                         <outlet property="maxLabel" destination="v4h-pA-OsZ" id="hG6-E5-bOq"/>
                         <outlet property="minLabel" destination="BEZ-AT-rNV" id="9KJ-lV-dNP"/>
+                        <outlet property="stackView" destination="rbB-IP-v3j" id="xs8-x4-cBW"/>
                         <outlet property="temLabel" destination="26z-ZV-2rU" id="3uK-Ze-P4m"/>
                         <outlet property="weatherLabel" destination="5KT-xP-wOa" id="rEq-7K-fAa"/>
                     </connections>

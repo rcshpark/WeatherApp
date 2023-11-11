@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var minLabel: UILabel!
     @IBOutlet weak var maxLabel: UILabel!
     
+    @IBOutlet weak var weatherStackView: UIStackView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
