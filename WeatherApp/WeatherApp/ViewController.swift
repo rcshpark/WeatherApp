@@ -25,10 +25,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    func configureView(weatherInformation: WeatherInformation){
+        self.cityLabel.text = weatherInformation.name
+        if let weather = weatherInformation.weather.first{
+            self.weatherLabel.text = weather.description
+        }
+        self.temLabel.text = "\(Int(weatherInformation.temp.temp - 273.15))°C"
+        self.maxLabel.text = "최고: \(Int(weatherInformation.temp.maxTemp - 273.15))°C"
+        self.minLabel.text = "최저: \(Int(weatherInformation.temp.minTemp - 273.15))°C"
+    }
     func getCurrentWeather(cityName: String){
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=1b0c39a6a1e60feafa1a3674910a65af") else { return }
         let session = URLSession(configuration: .default)
-        session.dataTask(with: url){ [weak self]data, response, error in
+        session.dataTask(with: url){ [weak self] data, response, error in
             guard let data = data, error == nil else { return }
             let decoder = JSONDecoder()
             guard let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data) else{
@@ -39,15 +49,6 @@ class ViewController: UIViewController {
                 self?.configureView(weatherInformation: weatherInformation)
             }
         }.resume()
-    }
-    func configureView(weatherInformation: WeatherInformation){
-        self.cityLabel.text = weatherInformation.name
-        if let weather = weatherInformation.weather.first{
-            self.weatherLabel.text = weather.description
-        }
-        self.temLabel.text = "\(Int(weatherInformation.temp.temp - 273.15))°C"
-        self.maxLabel.text = "최고: \(Int(weatherInformation.temp.maxTemp - 273.15))°C"
-        self.minLabel.text = "최저: \(Int(weatherInformation.temp.minTemp - 273.15))°C"
     }
 }
 

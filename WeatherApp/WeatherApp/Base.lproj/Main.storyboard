@@ -31,7 +31,7 @@
                                     <action selector="loadWeatherBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJX-gR-fyZ"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="rbB-IP-v3j">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="rbB-IP-v3j">
                                 <rect key="frame" x="24" y="231.33333333333337" width="345" height="174"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="0aI-Ra-hrf">
@@ -100,9 +100,9 @@
                         <outlet property="cityTextField" destination="UtQ-cM-L1Q" id="oaV-v9-tGJ"/>
                         <outlet property="maxLabel" destination="v4h-pA-OsZ" id="hG6-E5-bOq"/>
                         <outlet property="minLabel" destination="BEZ-AT-rNV" id="9KJ-lV-dNP"/>
-                        <outlet property="stackView" destination="rbB-IP-v3j" id="xs8-x4-cBW"/>
                         <outlet property="temLabel" destination="26z-ZV-2rU" id="3uK-Ze-P4m"/>
                         <outlet property="weatherLabel" destination="5KT-xP-wOa" id="rEq-7K-fAa"/>
+                        <outlet property="weatherStackView" destination="rbB-IP-v3j" id="ylo-bl-d3I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
