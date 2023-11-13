@@ -25,7 +25,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
+    func showErrorAlert(message: String){
+        let alert =  UIAlertController(title: "error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "confirm", style: .default, handler: nil))
+        self.present(alert,animated: true,completion: nil)
+    }
     func configureView(weatherInformation: WeatherInformation){
         self.cityLabel.text = weatherInformation.name
         if let weather = weatherInformation.weather.first{
@@ -39,15 +43,22 @@ class ViewController: UIViewController {
         guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=1b0c39a6a1e60feafa1a3674910a65af") else { return }
         let session = URLSession(configuration: .default)
         session.dataTask(with: url){ [weak self] data, response, error in
+            let successRange = (200..<300)
             guard let data = data, error == nil else { return }
             let decoder = JSONDecoder()
-            guard let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data) else{
-                return
+            if let response = response as? HTTPURLResponse, successRange.contains(response.statusCode) {
+                guard let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data) else{ return }
+                DispatchQueue.main.async {
+                    self?.weatherStackView.isHidden = false
+                    self?.configureView(weatherInformation: weatherInformation)
+                }
+            } else {
+                guard let errorMessage =  try? decoder.decode(ErrorMessage.self, from: data) else { return }
+                DispatchQueue.main.async {
+                    self?.showErrorAlert(message: errorMessage.message)
+                }
             }
-            DispatchQueue.main.async {
-                self?.weatherStackView.isHidden = false
-                self?.configureView(weatherInformation: weatherInformation)
-            }
+            
         }.resume()
     }
 }
