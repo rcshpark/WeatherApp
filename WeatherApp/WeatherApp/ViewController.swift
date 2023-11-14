@@ -14,6 +14,10 @@ class ViewController: UIViewController {
             self.view.endEditing(true)
         }
     }
+    @IBAction func ootdActionBtn(_ sender: UIButton) {
+    }
+    
+    @IBOutlet weak var showOOTDBtn: UIButton!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var weatherLabel: UILabel!
     @IBOutlet weak var temLabel: UILabel!
@@ -51,6 +55,7 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async {
                     self?.weatherStackView.isHidden = false
                     self?.configureView(weatherInformation: weatherInformation)
+                    self?.showOOTDBtn.layer.isHidden = false
                 }
             } else {
                 guard let errorMessage =  try? decoder.decode(ErrorMessage.self, from: data) else { return }

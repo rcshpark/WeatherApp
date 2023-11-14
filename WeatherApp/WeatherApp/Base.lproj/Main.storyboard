@@ -81,6 +81,15 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmX-9U-Nmg">
+                                <rect key="frame" x="24" y="485.33333333333331" width="345" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Today's OOTD"/>
+                                <connections>
+                                    <action selector="ootdActionBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q65-s8-tTa"/>
+                                    <segue destination="Z7F-He-oK5" kind="show" id="SXw-QX-S5D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -90,9 +99,12 @@
                             <constraint firstItem="gcd-LP-g8L" firstAttribute="centerX" secondItem="UtQ-cM-L1Q" secondAttribute="centerX" id="85U-bI-NXS"/>
                             <constraint firstItem="gcd-LP-g8L" firstAttribute="top" secondItem="UtQ-cM-L1Q" secondAttribute="bottom" constant="24" id="BrH-7S-9Fy"/>
                             <constraint firstItem="UtQ-cM-L1Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="FPi-pJ-VWk"/>
+                            <constraint firstItem="tmX-9U-Nmg" firstAttribute="top" secondItem="rbB-IP-v3j" secondAttribute="bottom" constant="80" id="SE9-Gm-vP4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UtQ-cM-L1Q" secondAttribute="trailing" constant="24" id="XGl-N5-xWx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tmX-9U-Nmg" secondAttribute="trailing" constant="24" id="bKH-4v-Mn0"/>
                             <constraint firstItem="UtQ-cM-L1Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="fe3-RU-TSe"/>
                             <constraint firstItem="rbB-IP-v3j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="tS0-5o-ZVq"/>
+                            <constraint firstItem="tmX-9U-Nmg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="x7K-u5-gG3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -100,6 +112,7 @@
                         <outlet property="cityTextField" destination="UtQ-cM-L1Q" id="oaV-v9-tGJ"/>
                         <outlet property="maxLabel" destination="v4h-pA-OsZ" id="hG6-E5-bOq"/>
                         <outlet property="minLabel" destination="BEZ-AT-rNV" id="9KJ-lV-dNP"/>
+                        <outlet property="showOOTDBtn" destination="tmX-9U-Nmg" id="ERj-Jb-kln"/>
                         <outlet property="temLabel" destination="26z-ZV-2rU" id="3uK-Ze-P4m"/>
                         <outlet property="weatherLabel" destination="5KT-xP-wOa" id="rEq-7K-fAa"/>
                         <outlet property="weatherStackView" destination="rbB-IP-v3j" id="ylo-bl-d3I"/>
@@ -108,6 +121,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21" y="4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="naD-nn-5Ot">
+            <objects>
+                <viewController id="Z7F-He-oK5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S01-sm-q51">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="e95-Xq-mOV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="56a-qp-enG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Npy-E9-e7B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1105" y="4"/>
         </scene>
     </scenes>
     <resources>
