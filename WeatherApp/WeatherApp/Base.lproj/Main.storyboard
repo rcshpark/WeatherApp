@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="21" y="4"/>
         </scene>
-        <!--View Controller-->
+        <!--Ootd View Controller-->
         <scene sceneID="naD-nn-5Ot">
             <objects>
-                <viewController id="Z7F-He-oK5" sceneMemberID="viewController">
+                <viewController id="Z7F-He-oK5" customClass="OotdViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S01-sm-q51">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
