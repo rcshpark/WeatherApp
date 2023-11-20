@@ -8,5 +8,6 @@
 import UIKit
 
 class OotdViewController : UIViewController {
-    // test commir
+    
 }
+ 

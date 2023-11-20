@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class ViewController: UIViewController {
+class WeatherViewController: UIViewController {
     @IBOutlet weak var cityTextField: UITextField!
     @IBAction func loadWeatherBtn(_ sender: Any) {
         if let cityName = self.cityTextField.text {
@@ -25,9 +25,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var maxLabel: UILabel!
     
     @IBOutlet weak var weatherStackView: UIStackView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.hidesBackButton = true
     }
     func showErrorAlert(message: String){
         let alert =  UIAlertController(title: "error", message: message, preferredStyle: .alert)
