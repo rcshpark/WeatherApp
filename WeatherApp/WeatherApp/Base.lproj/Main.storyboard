@@ -204,14 +204,59 @@
                     <view key="view" contentMode="scaleToFill" id="zo8-IV-5lW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kRw-6x-UpP">
+                                <rect key="frame" x="16" y="137" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZXQ-jv-KVv">
+                                <rect key="frame" x="16" y="208" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlO-3G-vXn">
+                                <rect key="frame" x="155" y="290" width="83" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="회원가입"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MF2-yF-Lcm">
+                                <rect key="frame" x="16" y="106" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2r-Oy-7Dw">
+                                <rect key="frame" x="16" y="179" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="AEb-V2-lwh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m2r-Oy-7Dw" firstAttribute="leading" secondItem="AEb-V2-lwh" secondAttribute="leading" constant="16" id="1zy-iV-2xt"/>
+                            <constraint firstItem="MF2-yF-Lcm" firstAttribute="leading" secondItem="AEb-V2-lwh" secondAttribute="leading" constant="16" id="2no-qj-GpC"/>
+                            <constraint firstItem="ZXQ-jv-KVv" firstAttribute="top" secondItem="kRw-6x-UpP" secondAttribute="bottom" constant="37" id="DPf-9M-1eS"/>
+                            <constraint firstItem="kRw-6x-UpP" firstAttribute="top" secondItem="AEb-V2-lwh" secondAttribute="top" constant="34" id="KSE-85-71M"/>
+                            <constraint firstItem="AEb-V2-lwh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="m2r-Oy-7Dw" secondAttribute="trailing" symbolic="YES" id="LXp-NG-x28"/>
+                            <constraint firstItem="ZXQ-jv-KVv" firstAttribute="top" secondItem="m2r-Oy-7Dw" secondAttribute="bottom" constant="8" id="MVn-du-0kb"/>
+                            <constraint firstItem="ZXQ-jv-KVv" firstAttribute="leading" secondItem="AEb-V2-lwh" secondAttribute="leading" constant="16" id="WQZ-E8-KoN"/>
+                            <constraint firstItem="AEb-V2-lwh" firstAttribute="trailing" secondItem="kRw-6x-UpP" secondAttribute="trailing" constant="16" id="Xoj-eB-Dyn"/>
+                            <constraint firstItem="AEb-V2-lwh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MF2-yF-Lcm" secondAttribute="trailing" symbolic="YES" id="apn-gq-LpX"/>
+                            <constraint firstItem="UlO-3G-vXn" firstAttribute="centerX" secondItem="ZXQ-jv-KVv" secondAttribute="centerX" id="bIB-hc-xs8"/>
+                            <constraint firstItem="kRw-6x-UpP" firstAttribute="leading" secondItem="AEb-V2-lwh" secondAttribute="leading" constant="16" id="hlz-cm-dIm"/>
+                            <constraint firstItem="UlO-3G-vXn" firstAttribute="top" secondItem="ZXQ-jv-KVv" secondAttribute="bottom" constant="48" id="luS-KR-FZo"/>
+                            <constraint firstItem="AEb-V2-lwh" firstAttribute="trailing" secondItem="ZXQ-jv-KVv" secondAttribute="trailing" constant="16" id="ux7-74-Gai"/>
+                            <constraint firstItem="kRw-6x-UpP" firstAttribute="top" secondItem="MF2-yF-Lcm" secondAttribute="bottom" constant="10" id="z9M-2G-fkE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LSD-q8-EBS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dcj-e1-gsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2801" y="794"/>
+            <point key="canvasLocation" x="2800.7633587786258" y="793.66197183098598"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ddc-pc-7td">
