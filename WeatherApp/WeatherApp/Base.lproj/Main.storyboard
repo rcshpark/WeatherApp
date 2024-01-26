@@ -61,6 +61,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x3q-GQ-1HK"/>
+                    <connections>
+                        <outlet property="emailField" destination="MnE-dW-Otf" id="fTz-h8-hhy"/>
+                        <outlet property="pwField" destination="Y9a-U3-jcH" id="jeY-qr-vcb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQo-Kk-eEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
