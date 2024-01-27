@@ -1,10 +1,3 @@
-//
-//  LoginScreen.swift
-//  WeatherApp
-//
-//  Created by 박상훈 on 2023/11/20.
-//
-
 import UIKit
 
 class LoginViewController : UIViewController, UITextFieldDelegate {
@@ -15,7 +8,6 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
         emailField.delegate = self
         pwField.delegate = self
         emailField.textContentType = .emailAddress
-        emailField.borderStyle = .roundedRect
     }
     // 배경 클릭시 키보드 내림  ==> view 에 터치가 들어오면 에디팅모드를 끝냄.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -40,5 +32,4 @@ class LoginViewController : UIViewController, UITextFieldDelegate {
         self.navigationController?.pushViewController(loginVC, animated: true)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
-
 }
