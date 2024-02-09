@@ -11,10 +11,11 @@
 		7E62B20B2AFCA75100339B9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62B20A2AFCA75100339B9B /* AppDelegate.swift */; };
 		7E62B20D2AFCA75100339B9B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62B20C2AFCA75100339B9B /* SceneDelegate.swift */; };
 		7E62B20F2AFCA75100339B9B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62B20E2AFCA75100339B9B /* WeatherViewController.swift */; };
-		7E62B2122AFCA75100339B9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E62B2102AFCA75100339B9B /* Main.storyboard */; };
 		7E62B2142AFCA75200339B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E62B2132AFCA75200339B9B /* Assets.xcassets */; };
 		7E62B2172AFCA75200339B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E62B2152AFCA75200339B9B /* LaunchScreen.storyboard */; };
 		7E62B21F2AFCD3DA00339B9B /* WeatherInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62B21E2AFCD3DA00339B9B /* WeatherInformation.swift */; };
+		7E9B2BC42B75F22D00C82935 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9B2BC32B75F22D00C82935 /* HomeViewController.swift */; };
+		7E9B2BC72B75F38500C82935 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7E9B2BC62B75F38500C82935 /* SnapKit */; };
 		7EDFFB782B01D8A4009DA292 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDFFB772B01D8A4009DA292 /* ErrorMessage.swift */; };
 		7EE0C6712B0B8EC800B9882B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE0C6702B0B8EC800B9882B /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
@@ -25,11 +26,11 @@
 		7E62B20A2AFCA75100339B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E62B20C2AFCA75100339B9B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7E62B20E2AFCA75100339B9B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
-		7E62B2112AFCA75100339B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E62B2132AFCA75200339B9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E62B2162AFCA75200339B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E62B2182AFCA75200339B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E62B21E2AFCD3DA00339B9B /* WeatherInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInformation.swift; sourceTree = "<group>"; };
+		7E9B2BC32B75F22D00C82935 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7EDFFB772B01D8A4009DA292 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		7EE0C6702B0B8EC800B9882B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E9B2BC72B75F38500C82935 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,10 +71,10 @@
 				7E62B20A2AFCA75100339B9B /* AppDelegate.swift */,
 				7E62B20C2AFCA75100339B9B /* SceneDelegate.swift */,
 				7E62B21E2AFCD3DA00339B9B /* WeatherInformation.swift */,
-				7E62B2102AFCA75100339B9B /* Main.storyboard */,
 				7E62B2132AFCA75200339B9B /* Assets.xcassets */,
 				7E62B2152AFCA75200339B9B /* LaunchScreen.storyboard */,
 				7E62B2182AFCA75200339B9B /* Info.plist */,
+				7E9B2BC32B75F22D00C82935 /* HomeViewController.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -103,6 +105,9 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				7E9B2BC62B75F38500C82935 /* SnapKit */,
+			);
 			productName = WeatherApp;
 			productReference = 7E62B2072AFCA75100339B9B /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -131,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 7E62B1FE2AFCA75100339B9B;
+			packageReferences = (
+				7E9B2BC52B75F38500C82935 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 7E62B2082AFCA75100339B9B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,7 +155,6 @@
 			files = (
 				7E62B2172AFCA75200339B9B /* LaunchScreen.storyboard in Resources */,
 				7E62B2142AFCA75200339B9B /* Assets.xcassets in Resources */,
-				7E62B2122AFCA75100339B9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +168,7 @@
 				7E10BBE62B04F8D7006DAA0C /* OotdViewController.swift in Sources */,
 				7E62B20F2AFCA75100339B9B /* WeatherViewController.swift in Sources */,
 				7E62B21F2AFCD3DA00339B9B /* WeatherInformation.swift in Sources */,
+				7E9B2BC42B75F22D00C82935 /* HomeViewController.swift in Sources */,
 				7EDFFB782B01D8A4009DA292 /* ErrorMessage.swift in Sources */,
 				7EE0C6712B0B8EC800B9882B /* LoginViewController.swift in Sources */,
 				7E62B20B2AFCA75100339B9B /* AppDelegate.swift in Sources */,
@@ -171,14 +179,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7E62B2102AFCA75100339B9B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E62B2112AFCA75100339B9B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7E62B2152AFCA75200339B9B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -316,7 +316,6 @@
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -344,7 +343,6 @@
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -382,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E9B2BC52B75F38500C82935 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E9B2BC62B75F38500C82935 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E9B2BC52B75F38500C82935 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7E62B1FF2AFCA75100339B9B /* Project object */;
 }
